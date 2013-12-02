@@ -1,0 +1,9 @@
+﻿@using MvcCarStore.Models
+@model IEnumerable<MvcCarStore.Models.Brand>
+
+<ul id="categories">
+    @foreach (var brand in Model)
+    {
+        <li>@Html.ActionLink( brand.CarBrand, "Browse", "Store", new { Brand = brand.CarBrand}, null)</li>
+    }
+</ul>

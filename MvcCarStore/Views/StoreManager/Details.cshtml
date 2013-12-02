@@ -1,0 +1,19 @@
+﻿@model MvcCarStore.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+ <p id = "car-details">
+        <img width="200px" height="100px" alt="@Model.Model" src="@Model.CarPicUrl"/> <br/>
+            <em>Brand:</em>
+            @Model.BrandName.CarBrand <br/>
+            <em>Model:</em>
+            @Model.Model <br/>
+            <em>Price:</em>
+            @String.Format("{0:f}", Model.Price)  <br/>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
